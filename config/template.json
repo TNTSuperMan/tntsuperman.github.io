@@ -1,0 +1,5 @@
+[
+    {"name" : "0", "temp" : ":img:*::\n=src=%=\n=style=width:%px;height:%px;="},
+    {"name" : "^", "temp" : ":p:*:%:"},
+    {"name" : "-", "temp" : ":a:*:%:\n=href=%="}
+]
