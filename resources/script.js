@@ -79,8 +79,6 @@ function load(){
     b.appendChild(document.createElement("header"));
     b.appendChild(document.createElement("main"));
     b.appendChild(document.createElement("footer"));
-    let ht = document.getElementsByName("html");
-    ht.addAttribute("lang",lang);
 
     //3.Request and Load PageFile
     let xhr = getfile(sitepath + "/page/" + page + ".page");
