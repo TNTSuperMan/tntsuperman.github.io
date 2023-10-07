@@ -1,3 +1,5 @@
+const sitepath = "tntsuperman.github.io";
+
 function getfile(path){
     let xhr = new XMLHttpRequest();
     xhr.open("GET",path,false);
@@ -7,8 +9,8 @@ function getfile(path){
 
 
 function loadpage(p,lang){
-    let xr = getfile("/config/template.json");
-    if(xr.status !== 200) console.error("could not access \"webroot/config/template.json\"");
+    let xr = getfile(sitepath + "/config/template.json");
+    if(xr.status !== 200) console.error("could not access \"" + sitepath + "/config/template.json\"");
     var tmpjson = JSON.parse(xr.responseText);
     let b = document.querySelector("main");
     for(let i = 0;i < p.length;++i){
@@ -70,7 +72,7 @@ function load(){
             }
         }
     }
-    if(lang == null || page == null) location.href = "?page=index&lang=en";
+    if(lang == null || page == null) location.href = sitepath + "?page=index&lang=en";
 
     //3. Generate HMF
     let b = document.querySelector("body");
@@ -81,7 +83,7 @@ function load(){
     ht.addAttribute("lang",lang);
 
     //3.Request and Load PageFile
-    let xhr = getfile("/page/" + page + ".page");
-    if(xhr.status !== 200) location.href = "?page=404&lang=en";
+    let xhr = getfile(sitepath + "/page/" + page + ".page");
+    if(xhr.status !== 200) location.href = sitepath + "?page=404&lang=en";
     loadpage(xhr.responseText.split("\n"),lang);
 }
