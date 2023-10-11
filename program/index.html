@@ -1,1 +1,47 @@
-<title>製作途中.html</title>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>TNTSuperMan WebSite</title>
+    <link rel="shortcut icon" href="/data/chicon.png">
+    <link rel="icon" href="/data/chicon.png">
+    <link rel="stylesheet" href="/data/style.css">
+    <style>
+        div{
+            border:solid 3px black;
+            width:200px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="r"><img class="r" src="/data/chicon.jpg"></a><br>
+        <a href="/" class="l">ホーム</a>
+        <a href="/tas/" class="l">TAS</a>
+        <a href="/picture/" class="l">画像集</a>
+        <a href="/program/" class="l">開発</a>
+    </header>
+    <main>
+        Tin☆Programを配信してます。
+        <button onclick="func()">隠す/表示する</button>
+        <div style="display:block">
+            <a href="/program/TinProgram/v0.1.html" target="_blank">v0.1はこちら！</a>
+        </div>
+        <script>
+            let hide = false;
+            function func(){
+                if(hide){
+                    document.querySelector("div").style.display="block";
+                    hide = false;
+                }else{
+                    document.querySelector("div").style.display="none";
+                    hide = true;
+                }
+            }
+        </script>
+    </main>
+    <footer>
+        <p>&copy; TNTSuperMan 2023 All Rights Reserved</p>
+    </footer>
+</body>
+</html>
