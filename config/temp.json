@@ -1,0 +1,17 @@
+{"id":[
+        "t",  "Text",
+        "p",  "Image",
+        "su", "SiteUrl", 
+        "tb", "TitleBar",
+        "bu", "BlankURL",
+        "idt","ID_Url",
+        "u"  ,"URL"
+],"temp":[
+        ":p:%","",
+        ":img:\n=src=%","",
+        ":a:%\n=href=javascript:lm(%)","",
+        ":a:%\n=href=javascript:lm(%)\n=class=l","",
+        ":a:%\n=href=%\n=target=_blank","",
+        ":h2:%\n=id=%","",
+        ":a:%\n=href=%"
+]}
