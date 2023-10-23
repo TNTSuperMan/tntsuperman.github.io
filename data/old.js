@@ -1,19 +1,17 @@
-let tmp = null;
+let tmp = undefined;
 let fir = true;
-let debug = false;
-const e = function(q) {return document.createElement(q)};
 
 function log(txt){console.log(txt)}
-function err(txt){if(debug)console.error(txt)}
+function err(txt){console.error(txt)}
 
 function Get(url){
     let file = new XMLHttpRequest();
-    file.open("POST",url,false);
+    file.open("GET",url,false);
     file.send();
     return file;
 }
 
-function LoadPage(main,page){
+function LoadPage(main,tmp,page){
     for(let i = 0;i < page.length;++i){
         err(page[i]);
         switch(page[i][0]){
@@ -23,7 +21,7 @@ function LoadPage(main,page){
                     err(i + 1 + " Line :xxx~ define is incorrect\n" + page[i]);
                     continue;
                 }
-                let m = e(ss[1]);
+                let m = document.createElement(ss[1]);
                 m.innerText = ss[2];
                 while(page.length-1 > i){
                     if(page[i+1].length !== 0){
@@ -36,7 +34,7 @@ function LoadPage(main,page){
                         }else{break;}
                     }else{break;}
                 }
-                main.append(m);
+                main.appendChild(m);
                 break;
             case ';':
                 let rr = page[i].split(';');
@@ -53,25 +51,19 @@ function LoadPage(main,page){
                 for(let j = 0;j < rr.length - 2;++j){
                     tmps=tmps.replace('%',rr[2+j]);
                 }
-                LoadPage(main,tmps.split('\n'));
+                LoadPage(main,tmp,tmps.split('\n'));
                 break;
             case '<':
-                let g = e("div");
-                g.innerHTML = page[i];
-                main.append(g);
+                let c = document.createElement("div");
+                c.innerHTML = page[i];
+                main.appendChild(c);
                 break;
         }
     }
 }
 
-function outpage(query,texts){
-    let main = e(query);
-    LoadPage(main,texts);
-    $(query).html(main.innerHTML);
-}
-
 function LoadPlugin(){
-    const h = $("head");
+    const h = document.querySelector("head");
     const loadjson = (path)=>{
         let f = Get(path);
         if(f.status === 200){
@@ -88,22 +80,21 @@ function LoadPlugin(){
     }
     
     for(let s = 0;s < pcfg.script.length;++s){
-        let atd = e("script");
+        let atd = document.createElement("script");
         atd.setAttribute("src",pcfg.script[s]);
-        h.append(atd);
+        h.appendChild(atd);
     }
     for(let s = 0;s < pcfg.module.length;++s){
-        let scr = e("script");
+        let scr = document.createElement("script");
         scr.setAttribute("src",pcfg.module[s]);
         scr.setAttribute("type","module");
-        h.append(scr);
+        h.appendChild(scr);
     }
     for(let s = 0;s < pcfg.css.length;++s){
-        let scr = e("link");
+        let scr = document.createElement("link");
         scr.setAttribute("href",pcfg.css[s]);
         scr.setAttribute("rel","stylesheet");
-        scr.setAttribute("type","text/css");
-        h.append(scr);
+        h.appendChild(scr);
     }
 }
 
@@ -116,45 +107,51 @@ function load(siteid){
         }
     }
     history.replaceState('','',"?" + siteid);
-    let b = $("body");
+    document.querySelector("main").innerHTML = null;
+    let b = document.querySelector("body");
     if(siteid === 404){
         load(1);
         return;
     }
+
     LoadPlugin();
     
-    if(tmp == null){
+    if(tmp === undefined){
         let tmpfile = Get("/config/temp.json");
         if(tmpfile.status !== 200){err("Not Found Template Configfile");return;}
         tmp = JSON.parse(tmpfile.responseText);
 
-        b.append(e("header"));
-        b.append(e("main"));
-        b.append(e("footer"));
 
         let headertxt = Get("/page/header.page");
         if(headertxt.status !== 200){
             err("Not Found PageFile: header.page");
             load(404);return;}
-        outpage("header",headertxt.responseText.split('\n'));
-
         let footertxt = Get("/page/footer.page");
         if(footertxt.status !== 200){
             err("Not Found PageFile: footer.page");
             load(404);return;}
-        outpage("footer",footertxt.responseText.split('\n'));
+        let head = document.createElement("header");
+        LoadPage(head,tmp,headertxt.responseText.split('\n'));
+        document.querySelector("header").innerHTML = head.innerHTML;
+        let foot = document.createElement("footer");
+        LoadPage(foot,tmp,footertxt.responseText.split('\n'));
+        document.querySelector("footer").innerHTML = foot.innerHTML;
     }
     lm(siteid);
 }
 
-function lm(id){
-    const c = "/page/"+id+".page";
-    let site = Get(c);
+function updateMain(url){
+    let site = Get(url);
     if(site.status !== 200){
-        err("Not Found PageFile: " + c);
+        err("Not Found PageFile: " + url);
         load(404);return;
     }
-    $("main").text(null);
-    outpage("main",site.responseText.split('\n'));
+    
+    let main = document.createElement("main");
+    LoadPage(main,tmp,site.responseText.split('\n'));
+    document.querySelector("main").innerHTML = main.innerHTML;
 }
-$(function(){load(1)});
+
+function lm(id){
+    updateMain("/page/"+id+".page");
+}
