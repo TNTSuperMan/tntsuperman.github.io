@@ -74,27 +74,28 @@ function lm(id){
     }
 
     if(tmp == null){
-    const b = $("body");
-    const tmpfile = Get("/config/temp.json");
-    if(tmpfile.status !== 200){err("Not Found Template Configfile");return;}
-    tmp = JSON.parse(tmpfile.responseText);
+        const b = $("body");
+        const tmpfile = Get("/config/temp.json");
+        if(tmpfile.status !== 200){err("Not Found Template Configfile");return;}
+        tmp = JSON.parse(tmpfile.responseText);
 
-    b.append(e("header"));
-    b.append(e("main"));
-    b.append(e("footer"));
-    $("head").append(e("title"));
+        b.append(e("header"));
+        b.append(e("main"));
+        b.append(e("footer"));
+        $("head").append(e("title"));
 
-    let headertxt = Get("/page/header.page");
-    if(headertxt.status !== 200){
-        err("Not Found PageFile: header.page");
-        lm(404);return;}
-    outpage("header",headertxt.responseText.split('\n'));
+        let headertxt = Get("/page/header.page");
+        if(headertxt.status !== 200){
+            err("Not Found PageFile: header.page");
+            lm(404);return;}
+        outpage("header",headertxt.responseText.split('\n'));
 
-    let footertxt = Get("/page/footer.page");
-    if(footertxt.status !== 200){
-        err("Not Found PageFile: footer.page");
-        lm(404);return;}
-    outpage("footer",footertxt.responseText.split('\n'));
+        let footertxt = Get("/page/footer.page");
+        if(footertxt.status !== 200){
+            err("Not Found PageFile: footer.page");
+            lm(404);return;}
+        outpage("footer",footertxt.responseText.split('\n'));
+        document.querySelector('footer').innerHTML += "<p>Powered by <a target=\"_blank\" href=\"https://github.com/TNTSuperMan/TextoPage-Plus.js\">TextoPage+.js</a><p>";
     }
     const c = "/page/"+id+".page";
     let site = Get(c);
