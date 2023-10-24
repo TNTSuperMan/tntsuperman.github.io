@@ -4,14 +4,12 @@
         "su", "SiteUrl", 
         "tb", "TitleBar",
         "bu", "BlankURL",
-        "idt","ID_Url",
         "u"  ,"URL"
 ],"temp":[
-        ":p:%","",
-        ":img:\n=src=%","",
-        ":a:%\n=href=javascript:lm(%)","",
-        ":a:%\n=href=javascript:lm(%)\n=class=l","",
-        ":a:%\n=href=%\n=target=_blank","",
-        ":h2:%\n=id=%","",
+        ":p:%","t",
+        ":img:\n=src=%","p",
+        ":a:%\n=href=javascript:lm(%)","su",
+        ":a:%\n=href=javascript:lm(%)\n=class=l","tb",
+        ":a:%\n=href=%\n=target=_blank","bu",
         ":a:%\n=href=%"
 ]}

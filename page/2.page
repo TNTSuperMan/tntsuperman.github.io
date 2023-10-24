@@ -1,6 +1,22 @@
+TASページ
 ;t;TASです。たぶんほとんどマイクラです。
 
 
-;idt;[TAS]Minecraft Java Edition "SetSeed NetheritePickaxe%" by TNTSuperMan in 17.73;0001
+:h2:[TAS]Minecraft Java Edition "SetSeed NetheritePickaxe%" by TNTSuperMan in 17.73
+=id=TAS001
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oNy7-H0ibE8?si=i010QllcUgQkcE8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-;t;まだサイトが複雑で不安定ですが見てほしいです。
+;t;はじめてのたす
+;t;一発で撮ってるんでRerecord countはｾﾞｰﾛｰ
+:h3:環境
+;t;使ったの：Curseforge・Minecraft java edition 1.16.1です。
+;t;ModランチャーはFabricです。バージョンは覚えてない(確認めんどい)けど多分最新のでいいです。
+;t;入れたのはデフォルトでFabric APIとFabric Tickrate changerです。
+;t;プレイPCはノートPCですが、CPUはIntel Core i5-7200Uで、メモリは16GB(実際は15.7GB)です。
+;t;GPUはIntel HD Graphics 620ですね。まあこの程度です。
+;t;いやーTASVideosに投稿したくて調べたら操作ファイル必要であきらめました。
+;t;MinecraftのTAS作るにはMOD必要=改造=TASVideosにMinecraft出せないって思いました。
+;t;今回の草点：OP的なやつの画像wwwwwww
+<p>soru【ゆっくり実況】が出してた<a href="https://www.youtube.com/shorts/e3amNrMsURk">動画</a>参考にやりました。ｶﾝｼｬｶﾝｼｬ</p>
+;t;海外のTAS10秒で草
+;t;はい、茶番は以上で、こちら、共有用URLです。
+<a href="https://tntsuperman.github.io/?p=2&s=TAS001">https://tntsuperman.github.io/?p=2&s=TAS001</a>

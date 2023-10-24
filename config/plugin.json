@@ -1,5 +1,8 @@
 {
-    "script" : [],
-    "module" : [],
-    "css"    : ["/data/style.css"]
+    "script":[
+        "/data/textopage.js"
+    ],"module":[
+    ],"css":[
+        "data/style.css"
+    ]
 }
