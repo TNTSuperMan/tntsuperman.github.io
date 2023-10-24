@@ -7,7 +7,7 @@ function err(txt){if(debug)console.error(txt)}
 
 function Get(url){
     let file = new XMLHttpRequest();
-    file.open("POST",url,false);
+    file.open("GET",url,false);
     file.send();
     return file;
 }

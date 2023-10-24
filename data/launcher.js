@@ -3,7 +3,7 @@ const h = document.querySelector("head");
 
 let pcfg;
 let x = new XMLHttpRequest();
-x.open("POST","/config/plugin.json",false);
+x.open("GET","/config/plugin.json",false);
 x.send();
 pcfg = JSON.parse(x.responseText);
 if(pcfg === null){
