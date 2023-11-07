@@ -95,7 +95,11 @@ function lm(id){
             err("Not Found PageFile: footer.page");
             lm(404);return;}
         outpage("footer",footertxt.responseText.split('\n'));
-        document.querySelector('footer').innerHTML += "<p>Powered by <a target=\"_blank\" href=\"https://github.com/TNTSuperMan/TextoPage-Plus.js\">TextoPage+.js</a><p>";
+        const c = function(c){document.body.innerHTML+=c};
+        c("<a href=\"#\" id=\"dialogb63756\">Powered by TextoPage.js</a>");
+        c("<div id=\"dialog29543\" style=\"display:none\" title=\"about: TextoPage.js\">Powered by TextoPage.js<br>"
+         +"<a target=\"_blank\" href=\"https://github.com/TNTSuperMan/TextoPage.js\">TextoPage.js Repository</a>"
+         +"</div>");
     }
     const c = "/page/"+id+".page";
     let site = Get(c);
@@ -135,4 +139,7 @@ $(function(){
     }else{
         lm(1);
     }
+    $("#dialogb63756").on("click",function(){
+        $("#dialog29543").dialog();
+    });
 });

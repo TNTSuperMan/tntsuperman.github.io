@@ -7,25 +7,24 @@ x.open("GET","/config/plugin.json",false);
 x.send();
 pcfg = JSON.parse(x.responseText);
 if(pcfg === null){
-    err("Not Found plugin.json");
-    
+    console.error("Not Found plugin.json");
 }
 
 for(let s = 0;s < pcfg.script.length;++s){
     let atd = t("script");
-    atd.setAttribute("src",pcfg.script[s]);
+    atd.src = pcfg.script[s];
     h.appendChild(atd);
 }
 for(let s = 0;s < pcfg.module.length;++s){
     let scr = t("script");
-    scr.setAttribute("src",pcfg.module[s]);
-    scr.setAttribute("type","module");
+    scr.src = pcfg.module[s];
+    scr.type = "module";
     h.appendChild(scr);
 }
 for(let s = 0;s < pcfg.css.length;++s){
     let nst = t("link");
-    nst.setAttribute("href",pcfg.css[s]);
-    nst.setAttribute("rel","stylesheet");
-    nst.setAttribute("type","text/css");
+    nst.href = pcfg.css[s];
+    nst.rel = "stylesheet";
+    nst.type = "text/css";
     h.appendChild(nst);
 }
