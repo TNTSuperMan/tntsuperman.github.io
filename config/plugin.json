@@ -1,7 +1,8 @@
 {
     "script":[
         "https://code.jquery.com/ui/1.11.4/jquery-ui.min.js",
-        "/data/textopage.js"
+        "/data/textopage.js",
+        "/data/menu-close-open.js"
     ],"module":[
     ],"css":[
         "resources/style.css",

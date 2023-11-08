@@ -68,10 +68,6 @@ function outpage(query,texts){
 }
 
 function lm(id){
-    if(id === 404){
-        lm(1);
-        return;
-    }
 
     if(tmp == null){
         const b = $("body");
