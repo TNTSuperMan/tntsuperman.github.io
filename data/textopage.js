@@ -19,7 +19,7 @@ function LoadPage(main,page){
             case ':':
                 let ss = page[i].split(':');
                 if(ss.length !== 3) {
-                    err(i + 1 + " Line :xxx~ define is incorrect\n" + page[i]);
+                    err(i + 1 + " Line :xxx~ define incorrect\n" + page[i]);
                     continue;
                 }
                 let m = e(ss[1]);
@@ -40,12 +40,12 @@ function LoadPage(main,page){
             case ';':
                 let rr = page[i].split(';');
                 if(rr.length < 3){
-                    console.error(i+1 + "Line text is incorrect\n" + page[i]);
+                    console.error(i+1 + "Line text incorrect\n" + page[i]);
                     continue;
                 }
                 let n = tmp.id.indexOf(rr[1]);
                 if(n === -1){
-                    err(i + 1 + " Line ;xxx~ define is incorrect\n" + page[i]);
+                    err(i + 1 + " Line ;xxx~ define incorrect\n" + page[i]);
                     continue;
                 }
                 let tmps = tmp.temp[n];
@@ -55,6 +55,9 @@ function LoadPage(main,page){
                 LoadPage(main,tmps.split('\n'));
                 break;
             case '<':
+                main.innerHTML += page[i];
+                break;
+            case '&' :
                 main.innerHTML += page[i];
                 break;
         }
@@ -73,7 +76,12 @@ function lm(id){
         const b = $("body");
         const tmpfile = Get("/config/temp.json");
         if(tmpfile.status !== 200){err("Not Found Template Configfile");return;}
-        tmp = JSON.parse(tmpfile.responseText);
+        let tmp_conv = {id: [],temp: []};
+        let tmp_orgobj = JSON.parse(tmpfile.responseText)
+        tmp_orgobj.forEach(function(value){tmp_conv.id.push(value.id);
+            tmp_conv.temp.push(value.base);
+        });
+        tmp = tmp_conv;
 
         b.append(e("header"));
         b.append(e("main"));
@@ -91,11 +99,8 @@ function lm(id){
             err("Not Found PageFile: footer.page");
             lm(404);return;}
         outpage("footer",footertxt.responseText.split('\n'));
-        const c = function(c){document.body.innerHTML+=c};
-        c("<a href=\"#\" id=\"dialogb63756\">Powered by TextoPage.js</a>");
-        c("<div id=\"dialog29543\" style=\"display:none\" title=\"about: TextoPage.js\">Powered by TextoPage.js<br>"
-         +"<a target=\"_blank\" href=\"https://github.com/TNTSuperMan/TextoPage.js\">TextoPage.js Repository</a>"
-         +"</div>");
+        const f = function(c){document.body.innerHTML+=c};
+        f("<a href=\"https://github.com/TNTSuperMan/TextoPage.js\" target=\"_blank\">Powered by TextoPage.js</a>");
     }
     const c = "/page/"+id+".page";
     let site = Get(c);
@@ -135,7 +140,4 @@ $(function(){
     }else{
         lm(1);
     }
-    $("#dialogb63756").on("click",function(){
-        $("#dialog29543").dialog();
-    });
 });

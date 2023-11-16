@@ -1,15 +1,31 @@
-{"id":[
-        "t",  "Text",
-        "p",  "Image",
-        "su", "SiteUrl", 
-        "tb", "TitleBar",
-        "bu", "BlankURL",
-        "u"  ,"URL"
-],"temp":[
-        ":p:%","t",
-        ":img:\n=src=%","p",
-        ":a:%\n=href=javascript:lm(%)","su",
-        ":a:%\n=href=javascript:lm(%)\n=class=l","tb",
-        ":a:%\n=href=%\n=target=_blank","bu",
-        ":a:%\n=href=%"
-]}
+[
+    {
+        "comment" : "Text",
+        "id" : "t",
+        "base" : ":p:%"
+    },{
+        "comment" : "Picture",
+        "id" : "p",
+        "base" : ":img:\n=src=%"
+    },{
+        "comment" : "SiteUrl",
+        "id" : "su",
+        "base" : ":a:%\n=href=javascript:lm(%)"
+    },{
+        "comment" : "TitleBar",
+        "id" : "tb",
+        "base" : ":a:%\n=href=javascript:lm(%)\n=class=l\n&nbsp;"
+    },{
+        "comment" : "BlankURL",
+        "id" : "bu",
+        "base" : ":a:%\n=href=%\n=target=_blank"
+    },{
+        "comment" : "URL",
+        "id" : "u",
+        "base" : ":a:%\n=href=%"
+    },{
+        "comment" : "TinProgramURL",
+        "id" : "tu",
+        "base" : ":a:v%はこちら\n=href=/resources/program/tin-program/v%.html\n=target=_blank\n=id=mco"
+    }
+]

@@ -1,22 +1,7 @@
 開発してるやつ
 <p>Tin☆Programありまーす [<a href="#" onclick="menu_close_open()">開く/閉じる</a>]
 
-:a:v0.4はこちら
-=href=/resources/program/tin-program/v0.4.html
-=target=_blank
-=id=mco
-
-:a:v0.3はこちら
-=href=/resources/program/tin-program/v0.3.html
-=target=_blank
-=id=mco
-
-:a:v0.2はこちら
-=href=/resources/program/tin-program/v0.2.html
-=target=_blank
-=id=mco
-
-:a:v0.1はこちら
-=href=/resources/program/tin-program/v0.1.html
-=target=_blank
-=id=mco
+;tu;0.4;0.4
+;tu;0.3;0.3
+;tu;0.2;0.2
+;tu;0.1;0.1
