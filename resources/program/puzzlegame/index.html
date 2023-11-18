@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p{
+            position:absolute;
+            background:aqua;
+            width:30px;
+            height:30px;
+            text-align: center;
+            cursor:default;
+        }
+        .field{
+            position: absolute;
+            background-color:bisque;
+            left:0px;
+            top:0px;
+            width:145px;
+            height:145px;
+        }
+        .text{
+            position: absolute;
+            left:150px;
+            top:0px;
+            line-height: 2px;
+        }
+    </style>
+    <script>
+        let pieces;
+        let field;
+        let air;
+        class piece{
+            constructor(num){
+                this.x = 0;
+                this.y = 0;
+                this.num = num;
+                if(!num){
+                    return;
+                }
+                let p = document.createElement("div");
+                p.setAttribute("class","p");
+                let id = "b" + num;
+                p.setAttribute("id",id);
+                p.innerText = num;
+                this.touchair = false;
+                field.appendChild(p);
+                this.e = document.getElementById(id);
+                this.e.onclick=()=>{
+                    detecttouch();
+                    if(this.touchair){
+                        let ox = this.x;
+                        let oy = this.y;
+                        this.setpos(air.x,air.y);
+                        air.setpos(ox,oy);
+                    }
+                }
+            }
+            setpos(x,y){
+                this.x = x;
+                this.y = y;
+                if(this.e){
+                    this.e.style.left = 5+x*35+"px";
+                    this.e.style.top =  5+y*35+"px";
+                }
+            }
+        }
+        function detecttouch(){
+            let d = [45,45,45,45];
+            let x = air.x;
+            let y = air.y;
+            for(let i = 0;i < 15;i++){
+                pieces[i].touchair = false;
+                let px = pieces[i].x;
+                let py = pieces[i].y;
+                if(x+1 == px || x-1 == px){
+                    if(y == py){
+                        pieces[i].touchair = true;
+                        if(x+1 == px) d[3] = i;
+                        if(x-1 == px) d[1] = i;
+                    }
+                }
+                if(y+1 == py || y-1 == py){
+                    if(x == px){
+                        pieces[i].touchair = true;
+                        if(y+1 == py) d[2] = i;
+                        if(y-1 == py) d[0] = i;
+                    }
+                }
+            }
+            return d;
+        }
+        function downkey(e){
+            switch(e.key){
+                    case 'w':
+                    case 'ArrowUp':
+                        if(detecttouch()[0]!=45){
+                            pieces[detecttouch()[0]].e.click();
+                        }
+                        break;
+                    case 'a':
+                    case 'ArrowLeft':
+                        if(detecttouch()[1]!=45){
+                            pieces[detecttouch()[1]].e.click();
+                        }
+                        break;
+                    case 's':
+                    case 'ArrowDown':
+                        if(detecttouch()[2]!=45){
+                            pieces[detecttouch()[2]].e.click();
+                        }
+                        break;
+                    case 'd':
+                    case 'ArrowRight':
+                        if(detecttouch()[3]!=45){
+                            pieces[detecttouch()[3]].e.click();
+                        }
+                        break;
+                }
+        }
+        function load(){
+            document.onselectstart=()=>false;
+            field = document.querySelector(".field");
+            pieces = Array(15);
+            air = new piece(0);
+            air.setpos(3,3);
+            for(let i = 0;i < 15;++i)pieces[i] = new piece(i+1);
+            let x = 0;
+            for(let i = 0;i < 4;++i) for(let j = 0;j < 4;++j) {
+                if(x >= 15) break;
+                pieces[x].setpos(j,i);
+                x++;
+            }
+            document.addEventListener('keydown',downkey);
+        }
+        function scramble(){
+            let k = ['w','a','s','d'];
+            for(let i = 0;i < 1000;++i) {
+                let c = k[Math.floor(Math.random() * 1000)%4];
+                let o = {
+                    key: c
+                }
+                downkey(o);
+            }
+        }
+        function solve(){
+            document.querySelectorAll(".p").forEach((o)=>{o.remove()});
+            pieces = Array(15);
+            air = new piece(0);
+            air.setpos(3,3);
+            for(let i = 0;i < 15;++i)pieces[i] = new piece(i+1);
+            let x = 0;
+            for(let i = 0;i < 4;++i) for(let j = 0;j < 4;++j) {
+                if(x >= 15) break;
+                pieces[x].setpos(j,i);
+                x++;
+            }
+        }
+    </script>
+</head>
+<body onload="load()">
+    <div class="field"></div>
+    <div class="text">
+        <p>パズルゲーム!</p><br>
+        <p>操作：矢印キーとWASDキーか</p>
+        <p>動かせるパズルをタッチ</p>
+        <br>
+        <br>
+        <button onclick="scramble()">パズルを混ぜる</button><br>
+        <button onclick="solve()">パズルを揃える</button>
+    </div>
+</body>
+</html>
