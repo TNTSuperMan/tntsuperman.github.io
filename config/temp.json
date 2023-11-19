@@ -26,6 +26,6 @@
     },{
         "comment" : "TinProgramURL",
         "id" : "tu",
-        "base" : ":a:v%はこちら\n=href=/p/tin-program/v%.html\n=target=_blank\n=id=mco"
+        "base" : ":a:v%はこちら\n=href=/TinProgram/archive/v%.html\n=target=_blank\n=id=mco"
     }
 ]
