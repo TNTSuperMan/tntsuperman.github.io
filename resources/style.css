@@ -1,13 +1,12 @@
-header{
-    background-image:url("/resources/chicon.jpg");
-}
-footer{
-    background-image:url("/resources/chicon.jpg");
-}
+header{background-image:url("/resources/chicon.jpg");}
+footer{background-image:url("/resources/chicon.jpg");}
 a.l{background:red;color:white;text-decoration: none;}
 a.l:hover{background:blue;}
 .r{size: 80px;width:80px;}
 #mco{display:block}
-p{
-    line-height:10px;
+p{line-height:10px;}
+.news{
+    font-size:17px;
+    color:white;
+    text-decoration:none;
 }

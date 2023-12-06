@@ -1,4 +1,4 @@
-const t = function(g){return document.createElement(g)};
+const t = (g)=>{return document.createElement(g)};
 const h = document.querySelector("head");
 
 let pcfg;

@@ -1,20 +1,16 @@
 let tmp = null;
 let debug = false;
-const e = function(q) {return document.createElement(q)};
-
-function log(txt){console.log(txt)}
-function err(txt){if(debug)console.error(txt)}
-
+let e = (q)=>{return document.createElement(q)};
+let log = console.log;
+let err = debug ? console.error : null;
 function Get(url){
     let file = new XMLHttpRequest();
     file.open("GET",url,false);
     file.send();
     return file;
 }
-
-function LoadPage(main,page){
+async function LoadPage(main,page){
     for(let i = 0;i < page.length;++i){
-        err(page[i]);
         switch(page[i][0]){
             case ':':
                 let ss = page[i].split(':');
@@ -40,7 +36,7 @@ function LoadPage(main,page){
             case ';':
                 let rr = page[i].split(';');
                 if(rr.length < 3){
-                    console.error(i+1 + "Line text incorrect\n" + page[i]);
+                    err(i+1 + "Line ;xx~ define incorrect\n" + page[i])
                     continue;
                 }
                 let n = tmp.id.indexOf(rr[1]);
@@ -63,58 +59,52 @@ function LoadPage(main,page){
         }
     }
 }
-
-function outpage(query,texts){
-    let main = e(query);
-    LoadPage(main,texts);
-    $(query).html(main.innerHTML);
+async function optocf(q,file){
+    fetch(file).then(async function(response){
+        if(!response.ok){
+            err("Not Found PageFile: " + file);
+            lm(404);return;}
+        let main = e("z");
+        LoadPage(main,(await response.text()).split('\n'));
+        $(q).html(main.innerHTML);
+    });
 }
-
-function lm(id){
+async function lm(id){
 
     if(tmp == null){
-        const b = $("body");
-        const tmpfile = Get("/config/temp.json");
+        let b = $("body");
+        let tmpfile = Get("/config/temp.json");
         if(tmpfile.status !== 200){err("Not Found Template Configfile");return;}
-        let tmp_conv = {id: [],temp: []};
+        tmp = {id: [],temp: []};
         let tmp_orgobj = JSON.parse(tmpfile.responseText)
-        tmp_orgobj.forEach(function(value){tmp_conv.id.push(value.id);
-            tmp_conv.temp.push(value.base);
+        tmp_orgobj.forEach((value)=>{tmp.id.push(value.id);
+            tmp.temp.push(value.base);
         });
-        tmp = tmp_conv;
 
         b.append(e("header"));
         b.append(e("main"));
         b.append(e("footer"));
         $("head").append(e("title"));
 
-        let headertxt = Get("/page/header.page");
-        if(headertxt.status !== 200){
-            err("Not Found PageFile: header.page");
-            lm(404);return;}
-        outpage("header",headertxt.responseText.split('\n'));
+        optocf("header","/page/header.page");
+        optocf("footer","/page/footer.page");
 
-        let footertxt = Get("/page/footer.page");
-        if(footertxt.status !== 200){
-            err("Not Found PageFile: footer.page");
+        document.body.innerHTML+="<a href=\"https://github.com/TNTSuperMan/TextoPage.js\" target=\"_blank\">Powered by TextoPage.js</a>";
+    }
+    let p = "/page/"+id+".page";
+    fetch(p).then(async function(response){
+        if(!response.ok){
+            err("Not Found PageFile: " + p);
             lm(404);return;}
-        outpage("footer",footertxt.responseText.split('\n'));
-        const f = function(c){document.body.innerHTML+=c};
-        f("<a href=\"https://github.com/TNTSuperMan/TextoPage.js\" target=\"_blank\">Powered by TextoPage.js</a>");
-    }
-    const c = "/page/"+id+".page";
-    let site = Get(c);
-    if(site.status !== 200){
-        err("Not Found PageFile: " + c);
-        lm(404);return;
-    }
-    const srs = site.responseText.split('\n')
-    $("main").text(null);
-    $("title").text(srs[0]);
-    outpage("main",srs);
+        let t = (await response.text()).split('\n');
+        $("title").text(t[0]);
+        
+        let main = e('z');
+        LoadPage(main,t);
+        $('main').html(main.innerHTML);
+    });
     history.replaceState('','',"?p=" + id);
 }
-
 $(function(){
     var qs = window.location.search;
     var g = new Object();
