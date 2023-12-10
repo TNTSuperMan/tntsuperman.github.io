@@ -40,7 +40,7 @@ async function LoadPage(main,page){
                     continue;
                 }
                 let n = tmp.id.indexOf(rr[1]);
-                if(n === -1){
+                if(n == -1){
                     err(i + 1 + " Line ;xxx~ define incorrect\n" + page[i]);
                     continue;
                 }
@@ -51,26 +51,24 @@ async function LoadPage(main,page){
                 LoadPage(main,tmps.split('\n'));
                 break;
             case '<':
-                main.innerHTML += page[i];
-                break;
             case '&' :
                 main.innerHTML += page[i];
                 break;
         }
     }
 }
-async function optocf(q,file){
+async function optocf(q,file,ist){
+    $(q).html("");
     fetch(file).then(async function(response){
         if(!response.ok){
             err("Not Found PageFile: " + file);
             lm(404);return;}
-        let main = e("z");
-        LoadPage(main,(await response.text()).split('\n'));
-        $(q).html(main.innerHTML);
+        let res = (await response.text()).split('\n')
+        LoadPage(document.querySelector(q),res);
+        if(ist) $("title").text(res[0]);
     });
 }
 async function lm(id){
-
     if(tmp == null){
         let b = $("body");
         let tmpfile = Get("/config/temp.json");
@@ -91,18 +89,7 @@ async function lm(id){
 
         document.body.innerHTML+="<a href=\"https://github.com/TNTSuperMan/TextoPage.js\" target=\"_blank\">Powered by TextoPage.js</a>";
     }
-    let p = "/page/"+id+".page";
-    fetch(p).then(async function(response){
-        if(!response.ok){
-            err("Not Found PageFile: " + p);
-            lm(404);return;}
-        let t = (await response.text()).split('\n');
-        $("title").text(t[0]);
-        
-        let main = e('z');
-        LoadPage(main,t);
-        $('main').html(main.innerHTML);
-    });
+    optocf("main","/page/"+id+".page",1);
     history.replaceState('','',"?p=" + id);
 }
 $(function(){
