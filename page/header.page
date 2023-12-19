@@ -1,7 +1,7 @@
-<marquee><a class="news" href="javascript:lm(5)">特大ニュース！</a></marquee>
+<marquee><a class="news" href="javascript:lm('asn')">特大ニュース！</a></marquee>
 <a class="r" href="javascript:lm(1)"><img class="r" src="/resources/chicon.jpg"></a>
 :br:
 ;tb;ホーム;1
-;tb;TAS;2
-;tb;画像;3
-;tb;開発;4
+;tb;TAS;tas
+;tb;画像;pic
+;tb;開発;dev

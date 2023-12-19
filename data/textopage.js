@@ -63,7 +63,14 @@ async function optocf(q,file,ist){
         if(!response.ok){
             err("Not Found PageFile: " + file);
             lm(404);return;}
-        let res = (await response.text()).split('\n')
+        let res = (await response.text()).split('\n');
+        let reg = /Redirect:\w+/;
+        if(reg.test(res[0])) {
+            let s = res[0].split(':')[1];
+            console.log("We!");
+            optocf(q,s,ist);
+            return;
+        }
         LoadPage(document.querySelector(q),res);
         if(ist) $("title").text(res[0]);
     });

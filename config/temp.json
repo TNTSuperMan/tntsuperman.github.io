@@ -10,11 +10,11 @@
     },{
         "comment" : "SiteUrl",
         "id" : "su",
-        "base" : ":a:%\n=href=javascript:lm(%)"
+        "base" : ":a:%\n=href=javascript:lm('%')"
     },{
         "comment" : "TitleBar",
         "id" : "tb",
-        "base" : ":a:%\n=href=javascript:lm(%)\n=class=l\n&nbsp;"
+        "base" : ":a:%\n=href=javascript:lm('%')\n=class=l\n&nbsp;"
     },{
         "comment" : "BlankURL",
         "id" : "bu",
