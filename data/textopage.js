@@ -2,15 +2,18 @@ let tmp = null;
 let debug = false;
 let e = (q)=>{return document.createElement(q)};
 let log = console.log;
-let err = debug ? console.error : null;
+let err = console.error;
 function Get(url){
     let file = new XMLHttpRequest();
     file.open("GET",url,false);
     file.send();
     return file;
 }
-async function LoadPage(main,page){
+async function LoadPage(o,page){
+    let org = [o];
+    let main = o;
     for(let i = 0;i < page.length;++i){
+        main = org[org.length - 1];
         switch(page[i][0]){
             case ':':
                 let ss = page[i].split(':');
@@ -54,24 +57,47 @@ async function LoadPage(main,page){
             case '&' :
                 main.innerHTML += page[i];
                 break;
+            case '-':
+                let s = page[i].split("\r");
+                s = s[0].split("-");
+                if(s.length != 2){
+                    err(i + 1 + "Line -xxx~ define incorrect");
+                    continue;
+                }
+                let ne = document.createElement(s[1]);
+
+                let ze = s[1].split('.');
+                if(ze.length == 2) ne.setAttribute("class",ze[1]);
+                ze = s[1].split('#');
+                if(ze.length == 2) ne.setAttribute("id",ze[1]);
+                main.appendChild(ne);
+                org.push(ne);
+                break;
+            case '+':
+                org.pop()
+                break;
+            default:
+                if(main.tagName == "P") main.innerHTML += page[i] + "<br>";
+                break;
         }
     }
 }
-async function optocf(q,file,ist){
-    $(q).html("");
+async function optocf(q,file,ist,message){
+    $(q).html( "<p id='pagemes'>" + (message ? message : "ページ移動中...") + "</p>");
     fetch(file).then(async function(response){
         if(!response.ok){
             err("Not Found PageFile: " + file);
-            lm(404);return;}
+            if(q == "main") lm(404);
+            $("p#pagemes").remove();
+            return;}
         let res = (await response.text()).split('\n');
-        let reg = /Redirect:\w+/;
-        if(reg.test(res[0])) {
-            let s = res[0].split(':')[1];
-            console.log("We!");
-            optocf(q,s,ist);
+        let reg = res[0].split(':');
+        if(reg[0] == "Redirect") {
+            optocf(q,reg[1],ist,"サイト内リダイレクト中...");
             return;
         }
         LoadPage(document.querySelector(q),res);
+        $("p#pagemes").remove();
         if(ist) $("title").text(res[0]);
     });
 }
@@ -91,8 +117,8 @@ async function lm(id){
         b.append(e("footer"));
         $("head").append(e("title"));
 
-        optocf("header","/page/header.page");
-        optocf("footer","/page/footer.page");
+        optocf("header","/page/.header");
+        optocf("footer","/page/.footer");
 
         document.body.innerHTML+="<a href=\"https://github.com/TNTSuperMan/TextoPage.js\" target=\"_blank\">Powered by TextoPage.js</a>";
     }

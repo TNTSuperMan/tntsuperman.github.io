@@ -1,4 +1,9 @@
-<marquee><a class="news" href="javascript:lm('asn')">特大ニュース！</a></marquee>
+
+-marquee
+:a:特大ニュース！
+=class=news
+=href=javascript:lm('asn')
++
 <a class="r" href="javascript:lm(1)"><img class="r" src="/resources/chicon.jpg"></a>
 :br:
 ;tb;ホーム;1

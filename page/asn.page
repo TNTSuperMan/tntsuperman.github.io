@@ -1,32 +1,34 @@
 特大ニュース:スクリプト変更
 :h2:特大ニュース！
-:p:はい、今回はTextoPage.jsを更新しました！
-:p:どういったとこ更新したかというと、
-<p>ページファイルの通信を<b>非同期的</b>にしました。</p>
+-p
+はい、今回はTextoPage.jsを更新しました！
+どういったとこ更新したかというと、
+ページファイルの通信を<b>非同期的</b>にしました。
 :br:
-:p:temp.jsonに関しては、ページ生成に必須なので、
-:p:同期的のままにしておきました。
-:p:ページファイルのサイズそんな大きくないですが、
-:p:それ以外非同期的にする部分なかったんですよね～
+temp.jsonに関しては、ページ生成に必須なので、
+同期的のままにしておきました。
+ページファイルのサイズそんな大きくないですが、
+それ以外非同期的にする部分なかったんですよね～
 :br:
-:p:ずっとfetch使いかったし、
-:p:やっぱ同期的だとなんか操作できないとか。
-:p:もともと使ってたXmlHttpRequestも
-:p:同期的リクエスト非推奨だし、
-:p:初回だけだと別いいかもってかんじ。
+ずっとfetch使いかったし、
+やっぱ同期的だとなんか操作できないとか。
+もともと使ってたXmlHttpRequestも
+同期的リクエスト非推奨だし、
+初回だけだと別いいかもってかんじ。
 <iframe width="500" height="220" frameborder="0" class="ads" src="/ads/puzzlegame">
 :h2:仕組みどうなってんねん
-:p:今使ってるTextopage.jsはこちら！
+今使ってるTextopage.jsはこちら！
 ;bu;https：//github.com/TNTSuperMan/tntsuperman.github.io/blob/main/data/textopage.js;https://github.com/TNTSuperMan/tntsuperman.github.io/blob/main/data/textopage.js
-:p:いつか更新するTextoPage.js本命リポジトリは
-:p:一番下の「Powered by TextoPage.js」から！
+いつか更新するTextoPage.js本命リポジトリは
+一番下の「Powered by TextoPage.js」から！
 :h2:そもそもTextoPage.js何？
 ;bu;こういうページファイルを;https://github.com/TNTSuperMan/tntsuperman.github.io/blob/main/page/2.page
-:p:Webページの形式に変換するプログラムです。
+Webページの形式に変換するプログラムです。
 :h2:結局何？
-:p:・Webページを生成するプログラムを改良した
-:p:・Webページのファイルを取得する方法がよくなった
-:p:・同期的な取得は終わるまでなにもできないけど
-:p:　非同期的な取得はやってる途中でもプログラムを動かせる
-:p:・つまりページのすべてが表示されるまでが高速に！
-:p:・つまり、プログラマー以外には無縁の話。
+・Webページを生成するプログラムを改良した
+・Webページのファイルを取得する方法がよくなった
+・同期的な取得は終わるまでなにもできないけど
+　非同期的な取得はやってる途中でもプログラムを動かせる
+・つまりページのすべてが表示されるまでが高速に！
+・つまり、プログラマー以外には無縁の話。
++
