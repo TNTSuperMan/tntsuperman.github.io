@@ -117,8 +117,8 @@ async function lm(id){
         b.append(e("footer"));
         $("head").append(e("title"));
 
-        optocf("header","/page/.header");
-        optocf("footer","/page/.footer");
+        optocf("header","/page/header.page");
+        optocf("footer","/page/footer.page");
 
         document.body.innerHTML+="<a href=\"https://github.com/TNTSuperMan/TextoPage.js\" target=\"_blank\">Powered by TextoPage.js</a>";
     }
