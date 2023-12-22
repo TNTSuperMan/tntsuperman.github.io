@@ -1,5 +1,4 @@
 let tmp = null;
-let debug = false;
 let e = (q)=>{return document.createElement(q)};
 let log = console.log;
 let err = console.error;
@@ -64,12 +63,16 @@ async function LoadPage(o,page){
                     err(i + 1 + "Line -xxx~ define incorrect");
                     continue;
                 }
-                let ne = document.createElement(s[1]);
+                let ne;
 
                 let ze = s[1].split('.');
-                if(ze.length == 2) ne.setAttribute("class",ze[1]);
-                ze = s[1].split('#');
-                if(ze.length == 2) ne.setAttribute("id",ze[1]);
+                if(ze.length == 2){
+                    ne = document.createElement(ze[0])
+                    ne.setAttribute("class",ze[1])
+                }else{
+                    ne = document.createElement(s[1]);
+                }
+                
                 main.appendChild(ne);
                 org.push(ne);
                 break;
@@ -77,7 +80,11 @@ async function LoadPage(o,page){
                 org.pop()
                 break;
             default:
-                if(main.tagName == "P") main.innerHTML += page[i] + "<br>";
+                if(main.tagName == "P"){
+                    main.innerHTML += page[i] + "<br>"
+                }else if(main.tagName == "STYLE"){
+                    main.innerHTML += page[i];
+                }
                 break;
         }
     }

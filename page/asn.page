@@ -4,27 +4,34 @@
 はい、今回はTextoPage.jsを更新しました！
 どういったとこ更新したかというと、
 ページファイルの通信を<b>非同期的</b>にしました。
-:br:
+
 temp.jsonに関しては、ページ生成に必須なので、
 同期的のままにしておきました。
 ページファイルのサイズそんな大きくないですが、
 それ以外非同期的にする部分なかったんですよね～
-:br:
+
 ずっとfetch使いかったし、
 やっぱ同期的だとなんか操作できないとか。
 もともと使ってたXmlHttpRequestも
 同期的リクエスト非推奨だし、
 初回だけだと別いいかもってかんじ。
++
 <iframe width="500" height="220" frameborder="0" class="ads" src="/ads/puzzlegame">
 :h2:仕組みどうなってんねん
+-p
 今使ってるTextopage.jsはこちら！
 ;bu;https：//github.com/TNTSuperMan/tntsuperman.github.io/blob/main/data/textopage.js;https://github.com/TNTSuperMan/tntsuperman.github.io/blob/main/data/textopage.js
+
 いつか更新するTextoPage.js本命リポジトリは
 一番下の「Powered by TextoPage.js」から！
++
 :h2:そもそもTextoPage.js何？
+-p
 ;bu;こういうページファイルを;https://github.com/TNTSuperMan/tntsuperman.github.io/blob/main/page/2.page
 Webページの形式に変換するプログラムです。
++
 :h2:結局何？
+-p
 ・Webページを生成するプログラムを改良した
 ・Webページのファイルを取得する方法がよくなった
 ・同期的な取得は終わるまでなにもできないけど

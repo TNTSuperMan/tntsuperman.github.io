@@ -27,5 +27,9 @@
         "comment" : "TinProgramURL",
         "id" : "tu",
         "base" : ":a:v%はこちら\n=href=/TinProgram/archive/v%.html\n=target=_blank\n=id=mco"
+    },{
+        "comment" : "記事リストで使う",
+        "id" : "kl",
+        "base" : ";su;%;%\n&nbsp;"
     }
 ]
