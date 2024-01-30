@@ -1,0 +1,25 @@
+開発してるやつ
+
+:script:
+=src=/script/menu-close-open.js
+
+/Tin☆Program、ありますか～？
+/Tin☆Program ありまーす! [<a href="#" onclick="menu_close_open()">開く/閉じる</a>]
+\tu\0.4\0.4
+\tu\0.3\0.3
+\tu\0.2\0.2
+\tu\0.1\0.1
+:br:
+
+:p:約一時間で作ったパズルゲームもあります。
+\bu\サイズを小さくする処理をしたゲームだよ！\/PazzleGame/arch/v0.1.min.html
+:br:
+\bu\開発向きだよ！上のと動作は同じだよ！\/PazzleGame/arch/v0.1.html
+:br:
+:br:
+
+/HTOfficeというOffice的な物を開発始めました(最近やってない)
+/HTMLでできたHTML出力をベースにするものです。
+/Officeとの対応はWord：Docs、Excel：Table、Powerpoint：Emphasisです。
+
+\bu\HTOfficeトップページ\/HTOffice

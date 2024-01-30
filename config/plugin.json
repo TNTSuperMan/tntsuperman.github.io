@@ -1,9 +1,0 @@
-{
-    "script":[
-        "/data/textopage.js",
-        "/data/menu-close-open.js"
-    ],"module":[
-    ],"css":[
-        "resources/style.css"
-    ]
-}

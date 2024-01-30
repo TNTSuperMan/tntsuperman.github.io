@@ -1,35 +1,18 @@
 [
     {
-        "comment" : "Text",
-        "id" : "t",
-        "base" : ":p:%"
-    },{
-        "comment" : "Picture",
-        "id" : "p",
-        "base" : ":img:\n=src=%"
-    },{
-        "comment" : "SiteUrl",
-        "id" : "su",
-        "base" : ":a:%\n=href=javascript:lm('%')"
-    },{
-        "comment" : "TitleBar",
-        "id" : "tb",
-        "base" : ":a:%\n=href=javascript:lm('%')\n=class=l\n&nbsp;"
-    },{
-        "comment" : "BlankURL",
-        "id" : "bu",
-        "base" : ":a:%\n=href=%\n=target=_blank"
-    },{
-        "comment" : "URL",
-        "id" : "u",
-        "base" : ":a:%\n=href=%"
-    },{
-        "comment" : "TinProgramURL",
-        "id" : "tu",
-        "base" : ":a:v%はこちら\n=href=/TinProgram/archive/v%.html\n=target=_blank\n=id=mco"
-    },{
-        "comment" : "記事リストで使う",
-        "id" : "kl",
-        "base" : ";su;%;%\n&nbsp;"
+        "name" : "tb",
+        "base" : ":a:%1\n=href=#\n=onclick=l('%2')\n=class=tb\n&&nbsp;"
+    },
+    {
+        "name" : "bu",
+        "base" : "&<a href=\"%2\" target=\"_blank\">%1</a>"
+    },
+    {
+        "name" : "tu",
+        "base" : ":a:v%1はこちら\n=href=/TinProgram/archive/v%2.html\n=target=_blank\n=id=mco"
+    },
+    {
+        "name" : "tl",
+        "base" : ":div:\n=id=%1"
     }
 ]

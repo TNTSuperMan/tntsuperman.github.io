@@ -1,0 +1,35 @@
+:link:
+=rel=stylesheet
+=href=/resources/style.css
+
+&<a class="r" href="javascript:l('home')"><img class="r" src="/resources/chicon.jpg"></a>
+
+:br:
+
+\tb\ホーム\home
+\tb\開発\dev
+\tb\TAS\tas
+
+-style-DIRECT
+div.rt{
+    position:absolute;
+    right:0;
+    top:0;
+}
+a.list{
+    background:blue;
+    color:white;
+    text-decoration:none;
+    transition:background 0.3s ease;
+}
+a.list:hover{
+    background:#F0F;
+}
++
+
+-div
+=class=rt
+&<a href="https://youtube.com/@TNTSuperMan" target="_blank"><img alt="Youtube" src="https://www.youtube.com/s/desktop/28b0985e/img/favicon_144x144.png" width="30"></a>
+&<a href="https://github.com/TNTSuperMan" target="_blank"><img alt="Youtube" src="https://github.githubassets.com/favicons/favicon.svg" width="30"></a>
+&<a href="https://scratch.mit.edu/users/TNTSuperMan/" target="_blank"><img alt="Youtube" src="https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcRbATSHtJU2-56Gi4IQTEWQH6m-0wrvkLvlVhls47a_me4820pdqqV5DDNqpB4BCrBgScbxtjkMhCLnLaOixrK4AQz1p02XuqGyc5MOieBdA4_4C1g" width="30"></a>
++

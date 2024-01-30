@@ -1,7 +1,15 @@
-header{background-image:url("/resources/chicon.jpg");}
-footer{background-image:url("/resources/chicon.jpg");}
-a.l{background:red;color:white;text-decoration: none;transition:all 0.3s ease}
-a.l:hover{background:#F0F;}
+.tb{
+    text-decoration: none;
+    color:black;
+    border:1px black solid;
+    padding:3px;
+    background:white;
+    transition:all 0.3s ease;
+}
+.tb:hover{
+    background:#C5C5C5;
+    border:1px #C5C5C5 solid;
+}
 .r{
     width:80px;
     transition:all 0.3s linear;
@@ -9,6 +17,9 @@ a.l:hover{background:#F0F;}
 .r:hover{
     filter:grayscale(100%);
 }
+header{background-image:url("/resources/chicon.jpg");}
+footer{background-image:url("/resources/chicon.jpg");}
+
 #mco{display:block}
 .news{
     font-size:17px;

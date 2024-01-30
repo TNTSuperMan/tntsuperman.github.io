@@ -1,0 +1,24 @@
+{
+    "tempfile" : "/config/temp.json",
+    "pagepath" : {
+        "first" : "/page/",
+        "last" : ".txt"
+    },
+    "pagestruct" : [
+        {
+            "id" : "header",
+            "ename" : "header",
+            "default" : "/pstat/header.page"
+        },
+        {
+            "id" : "main",
+            "ename" : "main",
+            "default" : "/page/home.txt"
+        },
+        {
+            "id" : "footer",
+            "ename" : "footer",
+            "default" : "/pstat/footer.page"
+        }
+    ]
+}

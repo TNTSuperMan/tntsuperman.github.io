@@ -1,4 +1,4 @@
-let isopen = false;
+let isopen = true;
 function menu_close_open(){
     if(isopen){
         document.querySelectorAll("#mco").forEach(function(value){value.style.display="none"});
