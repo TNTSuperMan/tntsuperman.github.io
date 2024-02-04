@@ -79,7 +79,7 @@
 
     //#region ページ構築
     document.head.appendChild(document.createElement("title")); //タイトル要素
-    Promise.all(pf).then(de=>pfe.forEach((ee,i)=>Whxute(de[i],ee)))
+    Promise.all(pf).then(de=>pfe.forEach((ee,i)=>Whxute(de[i],ee,(pfi[i]==="main"?1:0))))
     .then(e=>{
         let z = Object.fromEntries(new URLSearchParams(location.search));
         if(z.s != undefined){
@@ -96,19 +96,19 @@ function l(id){ //ページ内移動
     history.replaceState('','',"?p=" + id);
     fetch(f.first + id + f.last)
         .then(e=>e.ok?e.text():errpage)
-        .then(e=>Whxute(e,me,1,1))
+        .then(e=>Whxute(e,me,1))
     
 }
-function Whxute(c,e,ef,home){ //ファイルを変換 ＊今回のメイン＊
+function Whxute(c,e,ef){ //ファイルを変換 ＊今回のメイン＊
     let o = [e];
-    if(ef) e.innerHTML = "";
     let se = null;
     let pmode = false;
     const no = e=>o[o.length-1];
     let nf = false;
     let m;
     let st = c.split("\r").join('').split("\n");
-    if(home){
+    if(ef){
+        e.innerHTML = "";
         document.querySelector("title").innerText = st[0];
     }
     st.forEach((p,i)=>{
