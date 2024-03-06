@@ -26,3 +26,22 @@ footer{background-image:url("/resources/chicon.jpg");}
     color:white;
     text-decoration:none;
 }
+
+
+div.rt{
+    position:fixed;
+    right:15px;
+    top:15px;
+}
+div.rt > a{
+    margin:5px;
+}
+a.list{
+    background:blue;
+    color:white;
+    text-decoration:none;
+    transition:background 0.3s ease;
+}
+a.list:hover{
+    background:#F0F;
+}

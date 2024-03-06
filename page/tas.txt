@@ -1,25 +1,33 @@
 TASページ
 /TASです。たぶんほとんどマイクラです。
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 \tl\TAS003
 :h2:[TAS]Minecraft Java Edition "SetSeed NetheritePickaxe%" by TNTSuperMan in 19.66
+
 &<iframe width="560" height="315" src="https://www.youtube.com/embed/RZRfdChRGj4?si=H0b-DREqA6xQj9y1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 /最初のTASがつるはし取った瞬間にタヒったのが気に食わなかったので再度挑戦しますた。
 /環境・MODは最初のネザライトツルハシTASと同じはずです。
 /最初のから遅れてるけどまあいいや。
 \bu\ほい共有用URL。\/?p=tas&s=TAS003
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
 \tl\TAS002
 :h2:[TAS]Minecraft Java Edition "SetSeed Dieing%" by TNTSuperMan in 6.06
+
 &<iframe width="560" height="315" src="https://www.youtube.com/embed/Tb3KqL7ItTA?si=BeeNq4gakILFkiGu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 /インフルエンザの主様が作りました。(検査陽性当日の次の日から発熱なんてなかったけど)
 /環境・MODは最初のネザライトツルハシTASとほぼ同じはず
 /即死RTAあったからTAS作ったけど遅れまくって草
 \bu\ほい共有用URL。\/?p=tas&s=TAS002
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
 \tl\TAS001
 :h2:[TAS]Minecraft Java Edition "SetSeed NetheritePickaxe%" by TNTSuperMan in 17.73
+
 &<iframe width="560" height="315" src="https://www.youtube.com/embed/oNy7-H0ibE8?si=i010QllcUgQkcE8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 /はじめてのたす
@@ -36,4 +44,3 @@ TASページ
 /soru【ゆっくり実況】が出してた<a href="https://www.youtube.com/shorts/e3amNrMsURk">動画</a>参考にやりました。ｶﾝｼｬｶﾝｼｬ
 /海外のTAS10秒で草
 \bu\ほい共有用URL。\/?p=tas&s=TAS001
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

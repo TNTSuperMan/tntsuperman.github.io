@@ -7,7 +7,7 @@
         alert("Whxuto.js エラー: \"" + wtsetting + "\"にアクセスできません\n")
               return;
     }
-    let wts = {};
+    let wts = {}; //設定情報
     try{
         wts = JSON.parse(await wtsf.text());
     }
@@ -15,9 +15,10 @@
         err("\"" + wtsetting + "\"の記述が不正です。");
     }
     let wep = [];
-    const wns = m => wep.push(m);
+    const wns = m => wep.push(m); //エラーダイアログの項目の追加関数
     if(wts.pagestruct == undefined) wns("pagestruct");
     if(wts.tempfile == undefined) wns("tempfile"); 
+    if(wts.icon == undefined) wns("icon"); 
     if(wts.pagepath == undefined) wns("pagepath"); else{
         if(wts.pagepath.first == undefined) wns("pagepath.first");
         if(wts.pagepath.last == undefined) wns("pagepath.last");
@@ -84,7 +85,15 @@
         let z = Object.fromEntries(new URLSearchParams(location.search));
         if(z.s != undefined){
             document.documentElement.scrollTop += document.getElementById(z.s).getBoundingClientRect().y;
-    }})
+    }});
+    let si = document.createElement("link");
+    let i = document.createElement("link");
+    si.rel = "shortcut icon";
+    i.rel = "icon";
+    si.href = wts.icon;
+    i.href = wts.icon;
+    document.head.appendChild(si);
+    document.head.appendChild(i);
     //#endregion
 })();
 let f; //wtsetting.json設定のpagepathを保存

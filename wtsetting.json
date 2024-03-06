@@ -1,4 +1,5 @@
 {
+    "icon" : "/resources/chicon.jpg",
     "tempfile" : "/config/temp.json",
     "pagepath" : {
         "first" : "/page/",

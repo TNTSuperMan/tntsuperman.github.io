@@ -1,7 +1,7 @@
 [
     {
         "name" : "tb",
-        "base" : ":a:%1\n=href=#\n=onclick=l('%2')\n=class=tb\n&&nbsp;"
+        "base" : ":a:%1\n=href=javascript:l('%2')\n=class=tb\n&&nbsp;"
     },
     {
         "name" : "bu",
