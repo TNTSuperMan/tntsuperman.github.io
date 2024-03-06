@@ -5,7 +5,7 @@
     },
     {
         "name" : "bu",
-        "base" : "&<a href=\"%2\" target=\"_blank\">%1</a>"
+        "base" : ":a:%1\n=href=%2\n=target=_blank"
     },
     {
         "name" : "tu",

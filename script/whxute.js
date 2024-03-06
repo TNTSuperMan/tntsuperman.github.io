@@ -1,10 +1,13 @@
 (async()=>{
+    let root = document.querySelector("html").getRootNode();
+    root.prepend(document.createComment("https://github.com/TNTSuperMan/Whxute.js"));
+    root.prepend(document.createComment("Powered by Whxute.js by TNTSuperMan."));
     //#region wtsetting.jsonの読み込み
     const err=e=>{alert("Whxute.js エラー：" + e);throw e};
     const wtsetting = "wtsetting.json";
     const wtsf = await fetch(wtsetting,{cache:"no-store"});
     if(!wtsf.ok){
-        alert("Whxuto.js エラー: \"" + wtsetting + "\"にアクセスできません\n")
+        alert("Whxute.js エラー: \"" + wtsetting + "\"にアクセスできません\n")
               return;
     }
     let wts = {}; //設定情報
