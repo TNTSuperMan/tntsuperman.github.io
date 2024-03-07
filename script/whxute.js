@@ -85,9 +85,9 @@
     document.head.appendChild(document.createElement("title")); //タイトル要素
     Promise.all(pf).then(de=>pfe.forEach((ee,i)=>Whxute(de[i],ee,(pfi[i]==="main"?1:0))))
     .then(e=>{
-        let z = Object.fromEntries(new URLSearchParams(location.search));
-        if(z.s != undefined){
-            document.documentElement.scrollTop += document.getElementById(z.s).getBoundingClientRect().y;
+        let get_arg = Object.fromEntries(new URLSearchParams(location.search));
+        if(get_arg.s != undefined){
+            document.documentElement.scrollTop += document.getElementById(get_arg.s).getBoundingClientRect().y;
     }});
     let si = document.createElement("link");
     let i = document.createElement("link");
@@ -111,57 +111,63 @@ function l(id){ //ページ内移動
         .then(e=>Whxute(e,me,1))
     
 }
-function Whxute(c,e,ef){ //ファイルを変換 ＊今回のメイン＊
-    let o = [e];
-    let se = null;
-    let pmode = false;
-    const no = e=>o[o.length-1];
-    let nf = false;
+function Whxute(text,elm,isMain){ //ファイルを変換 ＊今回のメイン＊
+    let layerElem = [elm];
+    let now_txtelem = null;
+    let is_txtmode = false;
+    const now_elem = e=>layerElem[layerElem.length-1]; 
+    let is_native = false;
     let m;
-    let st = c.split("\r").join('').split("\n");
-    if(ef){
-        e.innerHTML = "";
+    let st = text.split("\r").join('').split("\n");
+    if(isMain){
+        elm.innerHTML = "";
         document.querySelector("title").innerText = st[0];
     }
     st.forEach((p,i)=>{
         
-        if(p[0] === '+') nf = false;
-        if(nf) no().innerHTML += p + "\n";
+        if(p[0] === '+') is_native = false;
+        if(is_native) {
+            now_elem().innerHTML += p + "\n";
+            return;
+        }
 
         if(p[0]!=='/' || p[1]==='/'){
-            if(pmode) o.pop();
-            pmode = false;
+            if(is_txtmode) layerElem.pop();
+            is_txtmode = false;
         }
         if(p[0]!==':' && p[0]!=='='){
-            se = null;
+            now_txtelem = null;
         }
         switch(p[0]){
             case '/':
                 if(p[1]==='/') break;
-                if(!pmode){
+                if(!is_txtmode){
                     m = document.createElement("p");
-                    no().appendChild(m);
-                    o.push(m);
-                    pmode = true;
-                } else no().innerHTML += "<br>";
+                    now_elem().appendChild(m);
+                    layerElem.push(m);
+                    is_txtmode = true;
+                } else now_elem().innerHTML += "<br>";
+
                 m = p.split(""); m[0]=null;
-                no().innerHTML += m.join("");
+                now_elem().innerHTML += m.join("");
                 break;
             case ':':
                 m = p.split(":");
                 if(m.length < 3) break;
                 let m2 = document.createElement(m[1]);
+
                 m2.innerHTML = m[2];
-                se = m2;
-                no().appendChild(m2);
+                now_txtelem = m2;
+
+                now_elem().appendChild(m2);
                 break;
             case '=':
                 m = p.split('=');
                 if(m.length < 3) break;
-                if(!se){
-                    no().setAttribute(m[1],m[2]);
+                if(!now_txtelem){
+                    now_elem().setAttribute(m[1],m[2]);
                 }else{
-                    se.setAttribute(m[1],m[2]);
+                    now_txtelem.setAttribute(m[1],m[2]);
                 }
                 break;
             case '\\':
@@ -170,27 +176,30 @@ function Whxute(c,e,ef){ //ファイルを変換 ＊今回のメイン＊
                 let ti = template.name.indexOf(m[1]);
                 if(ti<0)break;
                 let tt = template.base[ti];
+
                 m.forEach((k,i)=>{
                     if(i < 2) return;
                     tt=tt.replace("%"+(i-1),k);
                 })
-                Whxute(tt,no());
+                Whxute(tt,now_elem());
                 break;
             case '&':
                 m = p.split(""); m[0]=null;
-                no().innerHTML += m.join("");
+                now_elem().innerHTML += m.join("");
                 break;
             case '-':
                 m = p.split("-");
                 if(m.length < 2) break;
+
                 let g = document.createElement(m[1]);
-                no().appendChild(g);
-                o.push(g);
-                if(m.length > 2) if(m[2] === "DIRECT") nf = true;
+                now_elem().appendChild(g);
+
+                layerElem.push(g);
+                if(m.length > 2) if(m[2] === "DIRECT") is_native = true;
                 break;
             case '+':
-                nf = false;
-                o.pop();
+                is_native = false;
+                layerElem.pop();
                 break;
         }
     });
