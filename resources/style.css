@@ -20,6 +20,16 @@
 header{background-image:url("/resources/chicon.jpg");}
 footer{background-image:url("/resources/chicon.jpg");}
 
+.foot{
+    color:#222;
+    text-decoration: none;
+    transition:all 0.3s ease;
+}
+.foot:hover{
+    color:#000;
+    background:rgba(200,200,200,0.5)
+}
+
 #mco{display:block}
 .news{
     font-size:17px;

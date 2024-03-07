@@ -1,4 +1,5 @@
 開発してるやつ
+:marquee:久しぶりの更新!!
 
 :script:
 =src=/script/menu-close-open.js
@@ -10,8 +11,16 @@
 \tu\0.2\0.2
 \tu\0.1\0.1
 :br:
+:br:
+\bu\EdiTab\https://tntsuperman.github.io/EdiTab/
+/なんかタブのタイトルとアイコン変えれるやつです。
+/仕事系タブ開いてるふりしてもいいですがタブを開かれたら
+/終わりなのでそういう系の使用用途は非推奨です。
+/謎にVue2使ってます。
+:br:
 
-:p:約一時間で作ったパズルゲームもあります。
+
+/約一時間で作ったパズルゲームもあります。
 \bu\サイズを小さくする処理をしたゲームだよ！\/PazzleGame/arch/v0.1.min.html
 :br:
 \bu\開発向きだよ！上のと動作は同じだよ！\/PazzleGame/arch/v0.1.html
@@ -23,3 +32,32 @@
 /Officeとの対応はWord：Docs、Excel：Table、Powerpoint：Emphasisです。
 
 \bu\HTOfficeトップページ\/HTOffice
+:br:
+:br:
+
+\bu\はりぼてショートカット\https://github.com/TNTSuperMan/HariboteShortcut
+/なんかテキストを入れると設定に合わせたアプリ・ファイルが開きます。
+/まだ実行ファイル配布してないのでYoutubeのコメント欄なので教えてください.
+:br:
+
+\bu\Virtual2D\https://github.com/TNTSuperMan/Virtual2D
+/開発中のVTuber的なソフトです。
+/設定ファイルエディターが最新のJSON式設定ファイル対応してないです。
+/声の部分が無理です
+/v0.1だけ配布してます。最新の欲しかったらYoutubeのコメントで教えて
+
+:br:
+
+\bu\Fobserver\https://github.com/TNTSuperMan/Fobserver
+/ファイル監視ソフト
+/欲しかったらYOutubeのコメ欄で((ry
+
+:br:
+
+\bu\すで始まってきで終わる言葉ゲーム\https://github.com/TNTSuperMan/SUdehajimatteKIdeowarukotobagame/releases/tag/v1
+/<a href="https://www.youtube.com/shorts/GaZylg5kHlY">この動画</a>で出てきたアプリ
+/クレジット表記するなら自由につかってね
+/自己責任よ
+:br:
+:br:
+/紹介できるのはこのぐらいよ(´・ω・｀)
