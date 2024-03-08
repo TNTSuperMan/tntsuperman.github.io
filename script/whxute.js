@@ -155,6 +155,7 @@ function l(id){ //ページ内移動
         .then(e=>Whxute(e,me,1))   
 }
 function textplugin(textarray){
+    if(txtplug == null) return textarray;
     return txtplug.func(textarray)
 }
 function Whxute(text,elm,isMain){ //ファイルを変換 ＊今回のメイン＊
