@@ -54,7 +54,7 @@
 
 :br:
 
-\bu\すで始まってきで終わる言葉ゲーム\https://github.com/TNTSuperMan/SUdehajimatteKIdeowarukotobagame/releases/tag/v1
+\bu\すで始まってきで終わる言葉ゲーム\om[dev_suki]
 /<a href="https://www.youtube.com/shorts/GaZylg5kHlY">この動画</a>で出てきたアプリ
 /クレジット表記するなら自由につかってね
 /自己責任よ
