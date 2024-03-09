@@ -29,8 +29,11 @@
             "name" : "tb",
             "base" : ":a:%1\n=href=javascript:l('%2')\n=class=tb\n&&nbsp;"
         },{
-            "name" : "bu",
+            "name" : "oldbu",
             "base" : ":a:%1\n=href=%2\n=target=_blank"
+        },{
+            "name" : "bu",
+            "base" : "&<a href=\"%2\">%1</a>"
         },{
             "name" : "tu",
             "base" : ":a:v%1はこちら\n=href=/TinProgram/archive/v%2.html\n=target=_blank\n=id=mco"

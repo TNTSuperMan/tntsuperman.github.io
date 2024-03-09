@@ -1,8 +1,9 @@
 (async()=>{
+    //#region クレジット表記コメント
     let root = document.querySelector("html").getRootNode(); //クレジット表記コメントを付ける
     root.prepend(document.createComment("https://github.com/TNTSuperMan/Whxute.js"));
     root.prepend(document.createComment("Powered by Whxute.js by TNTSuperMan."));
-
+    //#endregion
     //#region wtsetting.jsonの読み込み
     const err=e=>{alert("Whxute.js エラー：" + e);throw e};
     const wtsetting = "wtsetting.json";
@@ -42,7 +43,6 @@
     }
     f = wts.pagepath;
     //#endregion
-
     //#region テンプレ読込
     const temp = new Promise(r=>r(wts.temp))
         .then(rto=>{
@@ -51,7 +51,6 @@
             return ret;
             }).catch(e=>4545);
     //#endregion
-
     //#region ページファイル読み込み
     let pf = [];
     let pfe = [];
@@ -76,11 +75,11 @@
         pfi.push(e.id);
     });
     //#endregion
-
     //#region プラグインの読込
     let plugdata = [];
     wts.plugin.forEach(e=>{
         plugdata.push((async x=>{
+            //#region 読込/エラー忙しい
             let ps = fetch(e + "/script.js");
             let pc = fetch(e + "/config.json");
             await Promise.all([ps,pc]);
@@ -109,6 +108,7 @@
                 return;                
             }
             rpd.set(pcjo);
+            //#endregion
             switch(rpd.mode){
                 case "text":
                     txtplug = rpd;
@@ -117,13 +117,13 @@
         })())
     })
     //#endregion
-
-    //テンプレのエラー選別
+    //#region テンプレのエラー選別
     switch(await temp){
         case 4545:err("テンプレートファイル\"" + wts.tempfile + "\"の記述が不正です");
         default:template = await temp;
     }
     await Promise.all(plugdata);
+    //#endregion
     //#region ページ構築
     document.head.appendChild(document.createElement("title")); //タイトル要素
     Promise.all(pf).then(de=>pfe.forEach((ee,i)=>Whxute(de[i],ee,(pfi[i]==="main"?1:0))))
@@ -144,7 +144,6 @@
 })();
 let f; //wtsetting.json設定のpagepathを保存
 let template = {base:[],name:[]}; //テンプレ保存
-let txtplug;
 let me; //メイン要素を保存
 const errpage = "404\n:p:404 Not Found\n" + 
     ":p:ページファイルが存在しません。";
@@ -154,10 +153,13 @@ function l(id){ //ページ内移動
         .then(e=>e.ok?e.text():errpage)
         .then(e=>Whxute(e,me,1))   
 }
+//#region プラグイン関/変数
+let txtplug;
 function textplugin(textarray){
     if(txtplug == null) return textarray;
     return txtplug.func(textarray)
 }
+//#endregion
 function Whxute(text,elm,isMain){ //ファイルを変換 ＊今回のメイン＊
     let layerElem = [elm];
     let now_txtelem = null;
