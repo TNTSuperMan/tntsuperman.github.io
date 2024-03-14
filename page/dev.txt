@@ -60,4 +60,11 @@
 /自己責任よ
 :br:
 :br:
+\bu\フラッシュ暗算\https://tntsuperman.github.io/mentalarithmetic/
+/調整は色々できる
+/ライセンス：Apache License 2.0
+/商標利用OK、クレジット表記必須、商標利用NG
+/Vue2使ってます。
+:br:
+:br:
 /紹介できるのはこのぐらいよ(´・ω・｀)
