@@ -11,7 +11,6 @@ export function func(e){
             ret.push(t);
             return;
         }else{
-            console.log(config);
             config.forEach(c=>{
                 if(("om[" + c.id + "]") === t){
                     ret.push(c.data);
