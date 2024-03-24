@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /doc/
+Disallow: /page/
+Disallow: /plugin/
+Disallow: /pstat/
+Disallow: /script/
+Allow: /index.html
+
+Sitemap: https://tntsuperman.github.io/sitemap.xml
