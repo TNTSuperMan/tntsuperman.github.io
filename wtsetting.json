@@ -29,9 +29,6 @@
             "name" : "tb",
             "base" : ":a:%1\n=href=javascript:l('%2')\n=class=tb\n&&nbsp;"
         },{
-            "name" : "oldbu",
-            "base" : ":a:%1\n=href=%2\n=target=_blank"
-        },{
             "name" : "bu",
             "base" : "&<a href=\"%2\">%1</a>"
         },{
@@ -43,6 +40,12 @@
         },{
             "name" : "fot",
             "base" : ":a:%1\n=href=javascript:l('%2')\n=class=foot"
+        },{
+            "name" : "su",
+            "base" : ":a:%1\n=href=javascript:l('%2')"
+        },{
+            "name" : "lib",
+            "base" : "&<h2><a target='_blank' href='https://github.com/TNTSuperMan/%1'>%2</a></h2>"
         }
     ]
 }
