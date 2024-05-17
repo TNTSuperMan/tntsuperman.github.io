@@ -7,8 +7,9 @@
 :br:
 
 \tb\ホーム\home
-\tb\開発\dev
-\tb\TAS\tas
+\tb\アプリ開発\dev
+\tb\ライブラリ開発\lib
+\tb\TAS/RTA\tas
 -div
 =class=rt
 &<a href="https://youtube.com/@TNTSuperMan" target="_blank"><img alt="Youtube" src="https://www.youtube.com/s/desktop/28b0985e/img/favicon_144x144.png" width=30 height=30></a>

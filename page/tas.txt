@@ -1,5 +1,14 @@
-TASページ
+TAS/RTAページ
 /TASです。たぶんほとんどマイクラです。
+
+\tl\RTA001
+:h2:[RTA]Ubuntu Wordpress% in 28：02.05
+
+&<iframe width="560" height="315" src="https://www.youtube.com/embed/dORjk3xIn8I?si=SGsaUlG1Q3htrs-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+/誇るべき最初のRTAはWordpressインストールRTAとなってしまいました。
+/ロスがあまりにもおおいので多分再走します。
+\bu\ほい共有用URL。\/?p=tas&s=RTA001
 
 \tl\TAS003
 :h2:[TAS]Minecraft Java Edition "SetSeed NetheritePickaxe%" by TNTSuperMan in 19.66

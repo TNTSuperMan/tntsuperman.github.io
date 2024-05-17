@@ -1,10 +1,27 @@
 ライブラリ開発
-
+-style-DIRECT
+h2>a{
+    color:black;
+    text-decoration:none;
+    transition: all 0.2s ease;
+}
+h2>a:hover{
+    text-decoration:underline;
+    color: blue;
+}
++
+:h3:ライブラリのライセンスをApache License 2.0からMIT Licenseに変更しました！！
 /こちらでは主が開発したライブラリ(主にJS)を紹介します。
 
 \lib\Whxute.js\Whxute.js
 :h2:このサイトを構成しているライブラリです。
 /ライブラリというか、フレームワークです。
+
+\lib\TNTMarkov\TNTMarkov
+/Pythonのライブラリです。
+
+/Pythonでマルコフ連鎖で遊ぼうと思いましたが、markovifyが上手くいかなかったため、
+/自作しました。マルコフ連鎖をスマートに実装できて楽しかったです。
 
 \lib\EasyFile.js\EasyFile.js
 /ファイルのダウンロード/アップロードを簡単にできるようになります。
@@ -25,3 +42,4 @@
 \lib\TextoPage.js\TextoPage.js
 /Whxute.jsの前バージョンです。
 /もともとサイトこれで作られてました。
+/追記：もうアーカイブ化したのでApache License 2.0のままです。Whxute.jsを使ってください。
