@@ -13,33 +13,40 @@ h2>a:hover{
 :h3:ライブラリのライセンスをApache License 2.0からMIT Licenseに変更しました！！
 /こちらでは主が開発したライブラリ(主にJS)を紹介します。
 
-\lib\Whxute.js\Whxute.js
-:h2:このサイトを構成しているライブラリです。
+\dev\liblog.js
+:h2:このサイトを作っているライブラリです。
+/ライブラリというか、フレームワークです。
+/Whxute.jsが難読化したためモジュール化して可読性を高くしました。
+/webpackで圧縮できるの気持ちいい
+
+\dev\Whxute.js
+/もともとこのサイト作ってたライブラリです。
+/難読化したためliblog.jsに移行しました。
 /ライブラリというか、フレームワークです。
 
-\lib\TNTMarkov\TNTMarkov
+\dev\TNTMarkov
 /Pythonのライブラリです。
 
 /Pythonでマルコフ連鎖で遊ぼうと思いましたが、markovifyが上手くいかなかったため、
 /自作しました。マルコフ連鎖をスマートに実装できて楽しかったです。
 
-\lib\EasyFile.js\EasyFile.js
+\dev\EasyFile.js
 /ファイルのダウンロード/アップロードを簡単にできるようになります。
 /使い方はQiitaにて説明しています。
 \bu\記事\https://qiita.com/TNTSuperMan/items/7056414222b4b3a0aa2e
 
-\lib\libkey\libkey
+\dev\libkey
 /キーボード入力を簡単にします。
 /使い方はQiitaにて説明しています。
 \bu\記事\https://qiita.com/TNTSuperMan/items/2f4e601b156ea669f3e5
 
-\lib\GraphDOM\GraphDOM
+\dev\GraphDOM
 /グラフィカルにDOMを操作できます。
 /具体的には座標、回転、色など。
 /もともとはJQueryのhtml()をhtmlでセットできるようにしようとおもってましたが、
 /自分のような底辺がJQueryになど到底及ばないためこうなりました。
 
-\lib\TextoPage.js\TextoPage.js
+\dev\TextoPage.js
 /Whxute.jsの前バージョンです。
 /もともとサイトこれで作られてました。
 /追記：もうアーカイブ化したのでApache License 2.0のままです。Whxute.jsを使ってください。

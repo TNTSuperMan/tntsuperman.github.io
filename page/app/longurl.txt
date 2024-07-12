@@ -1,0 +1,5 @@
+LongURL
+\devsite\LongUrl\LongUrl
+/URLをめっちゃ長くします。
+/嫌いな人にURLを送る必要があったら使ってください。
+/無駄なGET引数を追加するだけで（URLの長さ以外）無害です。

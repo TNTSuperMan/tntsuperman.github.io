@@ -1,0 +1,6 @@
+パズルゲーム
+\dev\PazzleGame\パズルゲーム
+/約一時間で作ったパズルゲームもあります。
+\bu\サイズを小さくする処理をしたゲームだよ！\/PazzleGame/arch/v0.1.min.html
+:br:
+\bu\開発向きだよ！上のと動作は同じだよ！\/PazzleGame/arch/v0.1.html

@@ -1,7 +1,8 @@
 export const mode = "text";
-export let config;
-export function set(a){
-    config = a;
+export const name = "omit"
+let config
+export async function init(path){
+    config = await (await fetch("plugin/omit/config.json")).json()
 }
 export function func(e){
     const ryexp = /om[[\w+-.]+]/;

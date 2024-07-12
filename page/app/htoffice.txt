@@ -1,0 +1,5 @@
+HTOffice
+\devsite\HTOffice\HTOffice
+/HTOfficeというOffice的な物を開発始めました(最近やってない)
+/HTMLでできたHTML出力をベースにするものです。
+/Officeとの対応はWord：Docs、Excel：Table、Powerpoint：Emphasisです。

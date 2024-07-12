@@ -1,6 +1,3 @@
-かの有名なあの人のサイト
-:script:document.querySelector("h1").remove()
-
 :h1:自己紹介
 
 /僕はTNTSuperManです。

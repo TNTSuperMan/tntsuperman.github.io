@@ -1,7 +1,7 @@
 {
     "icon" : "/resources/chicon.jpg",
     "plugin" : [
-        "/plugin/omit"
+        "/plugin/omit/script.js"
     ],
     "pagepath" : {
         "first" : "/page/",
@@ -33,7 +33,7 @@
             "base" : "&<a href=\"%2\">%1</a>"
         },{
             "name" : "tu",
-            "base" : ":a:v%1はこちら\n=href=/TinProgram/archive/v%2.html\n=target=_blank\n=id=mco"
+            "base" : ":a:v%1はこちら\n=href=/TinProgram/archive/v%1.html\n=target=_blank\n=id=mco"
         },{
             "name" : "tl",
             "base" : ":div:\n=id=%1"
@@ -44,8 +44,11 @@
             "name" : "su",
             "base" : ":a:%1\n=href=javascript:l('%2')"
         },{
-            "name" : "lib",
-            "base" : "&<h2><a target='_blank' href='https://github.com/TNTSuperMan/%1'>%2</a></h2>"
+            "name" : "dev",
+            "base" : "&<h2><a target='_blank' href='https://github.com/TNTSuperMan/%1'>%1</a></h2>"
+        },{
+            "name" : "devsite",
+            "base" : "&<h2><a target='_blank' href='https://tntsuperman.github.io/%1'>%2</a></h2>"
         }
     ]
 }
