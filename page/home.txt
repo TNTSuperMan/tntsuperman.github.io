@@ -3,7 +3,8 @@
 
 /僕はTNTSuperManです。
 /悩みはマウスホイールが上手く動かないことです。
-/Whxute.js作ったのでサイトそっちに移行します。
+/<span style="text-decoration:line-through">Whxute.js作ったのでサイトそっちに移行します。</span>
+/なんとさらにliblog.jsに移行しました！！
 
 :h2:＊＊弐大活動垢＊＊
 
