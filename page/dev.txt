@@ -20,15 +20,13 @@
 \su\はりぼてショートカット\app/hs
 :br:
 \su\パズルゲーム\app/pazzle
+:br:
+\su\広告ゲーム\app/adsgame
 
 /今ページ移行中です。進行度はここまでです。
-:h2:広告ゲーム
-\bu\広告ゲーム\https://github.com/TNTSuperMan/AdsGame
-/広告である壁で人間が増えるゲームです。
-/DxLibで適当に出した図形でできています。
 
-:h2:すで始まってきで終わる言葉ゲーム
-\bu\すで始まってきで終わる言葉ゲーム\om[dev_suki]
+:h2:すから始まってきで終わる言葉ゲーム
+\bu\すから始まってきで終わる言葉ゲーム\om[dev_suki]
 /<a href="https://www.youtube.com/shorts/GaZylg5kHlY">この動画</a>で出てきたアプリ
 /クレジット表記するなら自由につかってね
 /自己責任よ

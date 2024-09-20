@@ -1,6 +1,13 @@
 TAS/RTAページ
 /TASです。たぶんほとんどマイクラです。
 
+\tl\TAS005
+:h2:[TAS]Minecraft Java Edition "SetSeed T%" by TNTSuperMan in 21.36
+&<iframe width="560" height="315" src="https://www.youtube.com/embed/D3bHFilFK80?si=qlnu2utHsmYGjBWd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+/新しいTAS作ってみました！
+/なぜか感圧版を無駄に壊してたので次はもっと速くしたいです！
+\bu\ほい共有用URL。\/?p=tas&s=TAS005
+
 \tl\RTA002
 :h2:[RTA]Ubuntu Wordpress% in 22：54.11
 &<iframe width="560" height="315" src="https://www.youtube.com/embed/5494zBG6x0M?si=Y4aOj6U8U80m0Aod" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
