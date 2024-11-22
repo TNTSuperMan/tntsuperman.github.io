@@ -17,8 +17,9 @@ h2>a:hover{
 :h2:このサイトを作っているライブラリです。
 /ライブラリというか、フレームワークです。
 /Whxute.jsが難読化したためモジュール化して可読性を高くしました。
-:spanwebpackで圧縮できるの気持ちいい
-=style=text-decoration:
+:span:webpackで圧縮できるの気持ちいい
+=style=text-decoration:line-through
+/Rollup(Terser)に変えました。気持ちいい
 
 \dev\Rjs
 /今めっちゃ熱中しているフレームワークです。
@@ -26,10 +27,14 @@ h2>a:hover{
 :a:公式ホームページ
 =href=https://tntsuperman.github.io/Rjs/
 
+\dev\JQX
+/リアクティブなJQueryを作ろうとしてます。
+/Identityでまとめようとして大失敗中です。
+
 \dev\Whxute.js
 /もともとこのサイト作ってたライブラリです。
 /難読化したためliblog.jsに移行しました。
-/ライブラリというか、フレームワークです。
+/ライブラリというか、フレームワークですね。
 
 \dev\TNTMarkov
 /Pythonのライブラリです。
