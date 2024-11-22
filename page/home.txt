@@ -8,28 +8,28 @@
 
 :h2:＊＊弐大活動垢＊＊
 
-\bu\Youtube\https://www.youtube.com/channel/UCm2l3FoLFIqLyN5h19iDW_w
+\bu\Youtube\https://www.youtube.com/@TNTSuperMan-Developers
 &&nbsp;
 \bu\Github\https://github.com/TNTSuperMan
 :p:その他はYoutubeチャンネルのプロフィールにあります。
 :h3:Githubでの活動に関して
 
-/1~3日に一回は活動があるかもしれない可能性がゼロではありません。
-/コミット・プッシュとかすぐなのでポンポンコミットがあります。
-/Javascript系の開発は、ホームページのリポジトリで開発して、
-/気が向いたら(向かない)本命のリポジトリを更新します。
+/RjsやBinGameEngineなどかなり偏って活動します。
+/よろしくです。
 
 &<iframe width="500" height="220" frameborder="0" class="ads" src="/ads/tin-program">
 
 /その他HTMLゲームは別リポジトリで作成して、
 /GithubPagesのアクションでサイトに公開できるようにしてます。
 
+/あとVue製Webツールはビルド結果プッシュしてましたが
+/Github actionsでビルドしてもらうようにしようと思ってます
 
 :h3:他アカウントの活動に関して
 
-/Youtubeの動画は、1~2週に一本ぐらい上げてます。
+/Youtubeの動画はあんまりあげてません。
 /コメントだけは毎日のようにします。
-/Scratchは色々な事情で何も共有してません。
+/Scratchは何を作るか思いつかないのであまり活動しません。
 /RobloxはPCの作業ユーザーと別の
 /ゲーム用ユーザーに入れてるのでであまりしてません。
 

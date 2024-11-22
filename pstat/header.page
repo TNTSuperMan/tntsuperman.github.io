@@ -2,6 +2,9 @@
 =rel=stylesheet
 =href=/resources/style.css
 
+:marquee:Youtubeチャンネル変えました
+=style=color:red;font-weight:1000;
+
 &<a class="r" href="javascript:l('home')"><img class="r" src="/resources/chicon.jpg" alt="home" width=80 height=80></a>
 
 :br:
@@ -12,7 +15,7 @@
 \tb\TAS/RTA\tas
 -div
 =class=rt
-&<a href="https://youtube.com/@TNTSuperMan" target="_blank"><img alt="Youtube" src="https://www.youtube.com/s/desktop/28b0985e/img/favicon_144x144.png" width=30 height=30></a>
+&<a href="https://www.youtube.com/@TNTSuperMan-Developers" target="_blank"><img alt="Youtube" src="https://www.youtube.com/s/desktop/28b0985e/img/favicon_144x144.png" width=30 height=30></a>
 &<a href="https://github.com/TNTSuperMan" target="_blank"><img alt="Github" src="https://github.githubassets.com/favicons/favicon.svg" width=30 height=30></a>
 &<a href="https://scratch.mit.edu/users/TNTSuperMan/" target="_blank"><img alt="Scratch" src="https://scratch.mit.edu/favicon.ico" width=30 height=30></a>
 +

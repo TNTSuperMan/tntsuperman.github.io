@@ -17,7 +17,14 @@ h2>a:hover{
 :h2:このサイトを作っているライブラリです。
 /ライブラリというか、フレームワークです。
 /Whxute.jsが難読化したためモジュール化して可読性を高くしました。
-/webpackで圧縮できるの気持ちいい
+:spanwebpackで圧縮できるの気持ちいい
+=style=text-decoration:
+
+\dev\Rjs
+/今めっちゃ熱中しているフレームワークです。
+/小さいことが取り柄です。
+:a:公式ホームページ
+=href=https://tntsuperman.github.io/Rjs/
 
 \dev\Whxute.js
 /もともとこのサイト作ってたライブラリです。
