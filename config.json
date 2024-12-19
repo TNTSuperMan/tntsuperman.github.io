@@ -49,6 +49,9 @@
         },{
             "name" : "devsite",
             "base" : "&<h2><a target='_blank' href='https://tntsuperman.github.io/%1'>%2</a></h2>"
+        },{
+            "name" : "blank",
+            "base" : ":a:%1\n=href=%2\n=target=_blank"
         }
     ]
 }

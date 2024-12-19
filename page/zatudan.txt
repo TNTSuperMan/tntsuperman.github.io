@@ -1,0 +1,7 @@
+雑談
+-style-DIRECT
+main a{display:block}
++
+/適当に書いた記事を置いときます。
+\su\旧チャンネルのTAS動画\tas
+\su\旧チャンネルにコメントしてくれた有名人について\zatudan/comment
