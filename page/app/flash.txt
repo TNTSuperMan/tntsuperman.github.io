@@ -1,0 +1,6 @@
+フラッシュ暗算
+\dev\mentalarithmetic
+/調整は色々できる
+/ライセンス：Apache License 2.0
+/商標利用OK、クレジット表記必須、商標利用NG
+/Vue2使ってます。

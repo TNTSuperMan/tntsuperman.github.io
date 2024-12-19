@@ -1,0 +1,4 @@
+BrainHack
+\dev\BrainHack
+/Brainf**kが難しすぎたため別の可読性の高い言語からBrainf**kに変換できるプログラムを作りました。
+/最近IF文を一部作りました。

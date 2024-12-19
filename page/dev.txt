@@ -1,51 +1,24 @@
 アプリ開発
+-style-DIRECT
+main a{display:block;}
++
 
 /ライブラリは別ページです。
 \su\こちら！\lib
-:br:
 :h2:アプリリスト
-:br:
 \su\Virtual2D\app/v2d
-:br:
 \su\Tin☆Program\app/tinprogram
-:br:
 \su\悪口メモ\app/insultmemo
-:br:
 \su\EdiTab\app/editab
-:br:
 \su\LongURL\app/longurl
-:br:
 \su\HTOffice\app/htoffice
-:br:
 \su\はりぼてショートカット\app/hs
-:br:
 \su\パズルゲーム\app/pazzle
-:br:
 \su\広告ゲーム\app/adsgame
+\su\すから始まってきで終わる言葉ゲーム\app/sk
+\su\フラッシュ暗算\app/flash
+\su\百回好きって言うプログラム\app/ohsuki
+\su\BrainHack\app/bh
 
-/今ページ移行中です。進行度はここまでです。
-
-:h2:すから始まってきで終わる言葉ゲーム
-\bu\すから始まってきで終わる言葉ゲーム\om[dev_suki]
-/<a href="https://www.youtube.com/shorts/GaZylg5kHlY">この動画</a>で出てきたアプリ
-/クレジット表記するなら自由につかってね
-/自己責任よ
-
-:h2:フラッシュ暗算
-\bu\フラッシュ暗算\https://tntsuperman.github.io/mentalarithmetic/
-/調整は色々できる
-/ライセンス：Apache License 2.0
-/商標利用OK、クレジット表記必須、商標利用NG
-/Vue2使ってます。
-
-:h2:百回好きって言うプログラム
-\bu\OHSuki\https://github.com/TNTSuperMan/OHSuki
-/C++、C#、Javascript、PHP、Python等で百回好きって言うプログラムを作りました。
-
-:h2:BrainHack
-\bu\BrainHack\https://github.com/TNTSuperMan/BrainHack
-/Brainf**kが難しすぎたため別の可読性の高い言語からBrainf**kに変換できるプログラムを作りました。
-/最近IF文を一部作りました。
-:br:
 :br:
 /紹介できるのはこのぐらいよ(´・ω・｀)

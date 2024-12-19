@@ -1,0 +1,3 @@
+百回好きって言うプログラム
+\dev\OHSuki
+/C++、C#、Javascript、PHP、Python等で百回好きって言うプログラムを作りました。
