@@ -6,3 +6,4 @@ main a{display:block}
 \su\旧チャンネルのTAS動画\tas
 \su\旧チャンネルにコメントしてくれた有名人について\zatudan/comment
 \su\iPhoneで絶対に起きれるアラームについて\zatudan/iphonealarm
+\su\スーパーマリオブラザーズ3が0.2秒で終わる件について\zatudan/mario_0.2
