@@ -1,3 +1,11 @@
 ACEGame
 /Comming soon...
 \blank\Based version\/page/app/acegame.html
+/バグ報告はYouTubeのコメント欄・GitHub等で教えてくれるとありがたいです。
+
+:h2:todo
+-ul
+:li:音
+:li:イベント
+:li:シナリオ
++
