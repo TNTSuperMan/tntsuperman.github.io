@@ -6,6 +6,7 @@ main a{display:block;}
 /ライブラリは別ページです。
 \su\こちら！\lib
 :h2:アプリリスト
+\su\ACEGame\app/acegame
 \su\BinGameEngine\app/bge
 \su\Virtual2D\app/v2d
 \su\Tin☆Program\app/tinprogram
