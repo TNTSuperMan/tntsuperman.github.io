@@ -1,0 +1,37 @@
+{
+    "icon" : "/favicon.ico",
+    "plugin" : [],
+    "path" : {
+        "first" : "/page/",
+        "last" : ".txt"
+    },
+    "pagestruct" : [
+        {
+            "id" : "header",
+            "ename" : "header",
+            "default" : "/pstat/header.page"
+        },
+        {
+            "id" : "main",
+            "ename" : "main",
+            "default" : "/page/home.txt"
+        },
+        {
+            "id" : "footer",
+            "ename" : "footer",
+            "default" : "/pstat/footer.page"
+        }
+    ],
+    "temp" : [
+        {
+            "name" : "su",
+            "base" : ":a:%1\n=href=javascript:l('%2')\n=class=%3"
+        },{
+            "name" : "dev",
+            "base" : "&<h2><a target='_blank' href='https://github.com/TNTSuperMan/%1'>%1</a></h2>"
+        },{
+            "name" : "devsite",
+            "base" : "&<h2><a target='_blank' href='https://tntsuperman.github.io/%1'>%2</a></h2>"
+        }
+    ]
+}

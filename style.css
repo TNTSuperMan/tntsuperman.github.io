@@ -1,0 +1,18 @@
+:root{
+    background:#000;
+    color:#0f0;
+}
+a{
+    color:#00f;
+}
+.tab{
+    text-decoration: none;
+    background: #040;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.tab:hover{
+    background: #050;
+}

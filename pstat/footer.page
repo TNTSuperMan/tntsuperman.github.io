@@ -1,0 +1,37 @@
+-style-DIRECT
+footer{
+    background: #003;
+    color: #00f;
+}
+footer *:not(style){
+    display: inline-block;
+}
+footer .tab{
+    background: #004;
+    color:#00f;
+}
+footer .tab:hover{
+    background: #005;
+}
++
+/(C) TNTSuperMan 2025 All rights reversed
+:br:
+:a:Blog
+=href=https://tntsuperman.pages.dev
+=target=_blank
+=class=tab
+
+:a:GitHub
+=href=https://github.com/TNTSuperMan
+=target=_blank
+=class=tab
+
+:a:Qiita
+=href=https://qiita.com/TNTSuperMan
+=target=_blank
+=class=tab
+
+:a:Scratch
+=href=https://scratch.mit.edu/users/TNTSuperMan
+=target=_blank
+=class=tab

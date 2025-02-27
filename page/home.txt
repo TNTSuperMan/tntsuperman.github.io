@@ -1,0 +1,10 @@
+TNTSuperMan@opensource
+/This is TNTSuperMan's opensource projects homepage.
+/これはTNTSuperManのオープンソースプロジェクトのホームページです。
+:h2:なぜブログが消えたか
+/前はブログ的になっていましたがそれだとGitHubPagesの制限が危ないと感じたためです。
+/あとGitHubPagesの目的的にもこれにしました。
+/ブログはこちらに移行しました。
+:a:tntsuperman.pages.dev
+=href=https://tntsuperman.pages.dev
+=target=_blank

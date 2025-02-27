@@ -1,0 +1,43 @@
+-style-DIRECT
+header{
+    background: #030;
+}
+header *:not(style){
+    display: inline-block;
+}
+@keyframes source{
+    0%{
+        content: "source";
+    }
+    95%{
+        content: "source";
+    }
+    96%{
+        content: "2ch";
+    }
+    100%{
+        content: "source";
+    }
+}
+header span{
+    font-size:20px;
+    font-weight:1000;
+    margin:5px;
+    color: #0f0;
+    text-decoration: none;
+    user-select: none;
+}
+header span::after{
+    animation: source 5s linear infinite;
+    content:"";
+}
+header .tab{
+    color:#0f0;
+}
++
+:span:TNTSuperMan@open
+=title=しばらく見つめてみよう
+:br:
+\su\Home\home\tab
+\su\プロフィール\profile\tab
+\su\現在取り組んでいること\now\tab
